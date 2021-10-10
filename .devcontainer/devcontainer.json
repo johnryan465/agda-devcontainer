@@ -1,0 +1,16 @@
+{
+  "name": "Agda (Community)",
+
+  "build": {
+          "dockerfile": "Dockerfile",
+          "args": {
+            "VARIANT": "9"
+          }
+  },
+  "settings": {},
+  "extensions": [
+    "banacorn.agda-mode"
+  ],
+
+  "remoteUser": "vscode"
+}
