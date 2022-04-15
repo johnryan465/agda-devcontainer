@@ -29,13 +29,13 @@ RUN cabal v2-install -j Agda --ghc-options -j
 
 WORKDIR /home/vscode
 
-RUN wget -O agda-stdlib.tar https://github.com/agda/agda-stdlib/archive/refs/tags/v1.7.tar.gz
+RUN wget -O agda-stdlib.tar https://github.com/agda/agda-stdlib/archive/refs/tags/v1.7.1.tar.gz
 RUN tar -zxvf agda-stdlib.tar
-RUN cd agda-stdlib-1.7 && cabal install
+RUN cd agda-stdlib-1.7.1 && cabal install
 
 ENV PATH=$PATH:/home/vscode/.cabal/bin
 RUN mkdir .agda
-RUN echo "/home/vscode/agda-stdlib-1.7/standard-library.agda-lib" > .agda/libraries
+RUN echo "/home/vscode/agda-stdlib-1.7.1/standard-library.agda-lib" > .agda/libraries
 RUN echo "standard-library" > .agda/defaults
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
